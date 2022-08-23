@@ -70,3 +70,11 @@ console.log(mutiply)
 const parityNumbers = setOfNumbers.map(num=>num % 2 == 0 ? `${num} : even` : `${num} : odd`)
 
 console.log(parityNumbers)
+let parity = setOfNumbers.map(num=>{
+    
+    return{
+        value : num,
+        details : num % 2 === 0 ? 'even' : 'odd'
+    }
+})
+console.log(parity)
