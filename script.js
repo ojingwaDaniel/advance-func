@@ -1,18 +1,18 @@
 let numbers = [2003,2004,2005,2006,2007,2008,2009,2010]
 numbers.forEach(digit=>{
-    // console.log(digit * digit)
+    console.log(digit * digit)
 })
 // callback a function on forEach
 let num = [2,3,5,6,8,9,19,12,13,15,16,18,19,34,35,36,38,39]
 num.forEach(function(digit){
     if(digit % 2 === 0){
-        // console.log(digit)
+        console.log(digit)
     }
 })
 // for each to print out the index and each element
 let digits = [2,3,5,6,8,9,19,12,13,15,16,18,19,34,35,36,38,39]
 digits.forEach(function(digit,index){// first parameter represent each element on the array , the second represent the index of the array ,the third parameter represnt the array itself
-    // console.log(`${index}  : ${digit}`)
+    console.log(`${index}  : ${digit}`)
 })
 let music = [
     {
@@ -45,22 +45,22 @@ let abbreviation = words.map(word=>{
     word =  word.toUpperCase().split('').join('.')
     return word
 })
-// console.log(abbreviation)
+console.log(abbreviation)
 let favorites = music.map(function(favoriteMusic){
     return favoriteMusic.name
 })
-// console.log(favorites)
+console.log(favorites)
 let wholeNumbers = numbers.map(function(num){
     return{
         value : num,
         isWholeNumber : num % 2 === 0
     }
 })
-// console.log(wholeNumbers)
+console.log(wholeNumbers)
 let doubleArray = numbers.map(function(num){
     return num * 2
 })
-// console.log(doubleArray)
+console.log(doubleArray)
 // ARROWS FUNCTIONS
 const setOfNumbers = [1,2,4,5,7,8,14,24,26]
 
