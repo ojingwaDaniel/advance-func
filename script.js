@@ -63,6 +63,7 @@ let doubleArray = numbers.map(function(num){
 // console.log(doubleArray)
 // ARROWS FUNCTIONS
 const setOfNumbers = [1,2,4,5,7,8,14,24,26]
+
 const mutiply = setOfNumbers.map(elements => elements * elements)
 console.log(mutiply)
 //printing out a odd and even numbers
@@ -78,3 +79,90 @@ let parity = setOfNumbers.map(num=>{
     }
 })
 console.log(parity)
+// FIND
+let song = [
+    {
+        name : 'There was jesus',
+        artist : 'Zack Willams',
+        rating : 7.5
+    },
+    {
+        name : 'Confidence',
+        artist : 'Santus Real',
+        rating : 8
+    },
+    {
+        name : 'God your\'e so Good',
+        artist : 'Passions',
+        rating : 9
+    },
+    {
+        name : 'Break a Chain',
+        artist : 'Jesus Culture',
+        rating : 5.5
+    },
+    {
+        name : 'my worship',
+        artist : 'theophilus',
+        rating : 7.0
+    },
+    {
+        name : 'Goodness of God',
+        artist : 'Bethel Music',
+        rating : 7.5
+    },
+    
+    
+    
+]
+
+let bestSong = song.find(song=>song.name.includes('God your\'e so Good'))
+console.log(bestSong)
+let players = ['Araujo','Eric Garcia','Christensen','Pique','Kounde']
+let bestCB = players.find(player => player.includes('A'))
+console.log(bestCB)
+// FILTER
+let usersSearch = 'God'
+let bestRating = song.filter(song=>{
+    let title = song.name.toLowerCase()
+    usersSearch  = usersSearch.toLowerCase()
+    return title.includes(usersSearch)
+
+})
+console.log(bestRating)
+let BestCB = players.filter(player=>(
+    player.includes('Araujo') || player.includes('Kounde')
+))
+console.log(BestCB)
+// EVERY
+let laligaCLubs = [
+    {
+        name : 'Real Madrid',
+        sofaScore : 8.5
+    },
+    {
+        name : 'FC Barcelona',
+        sofaScore : 7.0
+    },
+    {
+        name : 'ATM',
+        sofaScore : 6.0
+    },
+    {
+        name : 'Sevilla',
+        sofaScore : 5.0
+    },
+    {
+        name : 'Villereal',
+        sofaScore : 4.0
+    },
+    
+    
+    
+    
+    
+]
+let clubRating = laligaCLubs.every(clubs=> clubs.sofaScore >3.0)
+console.log(clubRating)
+let clubname = laligaCLubs.some(clubs => clubs.name.includes('FC'))
+console.log(clubname)
