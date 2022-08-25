@@ -36,5 +36,17 @@ let laligaCLubs = [
  let desendingRating = laligaCLubs.slice().sort((a,b)=>b.sofaScore -a.sofaScore)
  console.log(desendingRating)
  // INTRODUCTION TO REDUCE
+ // used to compare two elements in a array per time 
  const num = [9,8,7,6,4,5]
  const answer = num.reduce((totalAnswer,currentNumber)=> totalAnswer + currentNumber)
+ // checking the maximum score of students grade
+ let grades = [87,64,56,75,83,90,78,69,74,45,30]
+const maximumScore = grades.reduce((maxScore,currentGrade)=>{
+    if (maxScore > currentGrade) {
+        return maxScore
+        
+    }
+    return currentGrade
+ })
+ console.log(maximumScore)
+ 
