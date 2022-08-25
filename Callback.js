@@ -48,6 +48,13 @@ const maximumScore = grades.reduce((maxScore,currentGrade)=>{
     }
     return currentGrade
  })
+ const minimumScore = grades.reduce((minScore,currentGrade)=>{
+    if (minScore < currentGrade) {
+        return  minScore
+        
+    }
+    return currentGrade
+ })
  console.log(maximumScore)
  // can acheive all these using the built-in Math.max function
  const minmumScore = grades.reduce((min,currVal)=> Math.min(min,currVal))
