@@ -66,13 +66,13 @@ const maximumScore = grades.reduce((maxScore,currentGrade)=>{
  // if you vote for peter obi put in LP , ATIKU : PDP , tinubu : APC
 
  let votes = ['LP','PDP','APC','LP','PDP','APC','LP','PDP','APC','LP','PDP','APC','LP','PDP','APC','LP','PDP','APC','LP','PDP','APC','LP','PDP','APC','LP','LP','LP','LP','LP','LP','LP','LP','LP','LP','LP','LP','LP']
- let countingVote = votes.reduce((allVote,currentVote)=>{
-    if (allVote[currentVote]) {
-        allVote[currentVote]++
+ let countingVote = votes.reduce((memory,currentVote)=>{
+    if (!memory[currentVote]) {
+        memory[currentVote] = 1
     } else {
-        allVote[currentVote] = 1
+        memory[currentVote]++
     }
-    return allVote
+    return memory 
  },[])
  let bigCLubs = [
 
@@ -104,8 +104,19 @@ const maximumScore = grades.reduce((maxScore,currentGrade)=>{
         name : 'Man city',
         sofaScore : 5.0
     }
-    
+     
  ]
+ let clubsByRating = bigCLubs.reduce((memory,currentRating)=>{
+    let rating = Math.floor(currentRating.sofaScore)
+    if (!memory[rating]) {
+        memory[rating] = []
+        memory[rating].push(currentRating)
+    } else {
+        memory[rating].push(currentRating)
+        
+    }
+    return memory
+ },{})
 
     
     
