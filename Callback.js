@@ -35,3 +35,6 @@ let laligaCLubs = [
  console.log(asendingRating)
  let desendingRating = laligaCLubs.slice().sort((a,b)=>b.sofaScore -a.sofaScore)
  console.log(desendingRating)
+ // INTRODUCTION TO REDUCE
+ const num = [9,8,7,6,4,5]
+ const answer = num.reduce((totalAnswer,currentNumber)=> totalAnswer + currentNumber)
