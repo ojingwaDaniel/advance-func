@@ -60,3 +60,53 @@ const maximumScore = grades.reduce((maxScore,currentGrade)=>{
  const minmumScore = grades.reduce((min,currVal)=> Math.min(min,currVal))
  // doing the same for the max 
  const  maxGrade = grades.reduce((max,currVal)=> Math.max(max,currVal))
+ //complex use of reduce
+
+ //voting for peter obi , atiku , tinubu
+ // if you vote for peter obi put in LP , ATIKU : PDP , tinubu : APC
+
+ let votes = ['LP','PDP','APC','LP','PDP','APC','LP','PDP','APC','LP','PDP','APC','LP','PDP','APC','LP','PDP','APC','LP','PDP','APC','LP','PDP','APC','LP','LP','LP','LP','LP','LP','LP','LP','LP','LP','LP','LP','LP']
+ let countingVote = votes.reduce((allVote,currentVote)=>{
+    if (allVote[currentVote]) {
+        allVote[currentVote]++
+    } else {
+        allVote[currentVote] = 1
+    }
+    return allVote
+ },[])
+ let bigCLubs = [
+
+    {
+        name : 'Real Madrid',
+        sofaScore : 8.5
+    },
+    {
+        name : 'FC Barcelona',
+        sofaScore : 7.0
+    },
+    {
+        name : 'ATM',
+        sofaScore : 5.0
+    },
+    {
+        name : 'Liverpool',
+        sofaScore : 7.0
+    },
+    {
+        name : 'Manchester United',
+        sofaScore : 6.0
+    },
+    {
+        name : 'Chelsea',
+        sofaScore : 6.0
+    },
+    {
+        name : 'Man city',
+        sofaScore : 5.0
+    }
+    
+ ]
+
+    
+    
+   
